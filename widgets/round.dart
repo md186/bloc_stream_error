@@ -54,8 +54,8 @@ class EventRound extends StatelessWidget {
                                     )
                                   : navstate.index == 2
                                       ? BlocProvider(
-                                          create: (context) => QuestionsCubit()
-                                            ..showRandomQuestion(),
+                                          create: (context) => SumCubit()
+                                            ..showRandom(),
                                           child: ConferenceControlDice(),
                                         )
                                       : navstate.index == 3
@@ -88,8 +88,8 @@ class EventRound extends StatelessWidget {
                                     )
                                   : navstate.index == 2
                                       ? BlocProvider(
-                                          create: (context) => QuestionsCubit()
-                                          ..showRandomQuestion(),
+                                          create: (context) => SumCubit()
+                                          ..showRandom(),
                                           child: ConferenceControlDice(),
                                         )
                                       : navstate.index == 3
@@ -103,10 +103,9 @@ class EventRound extends StatelessWidget {
                     }
 
                     return Container(
-                      child: Text('Something went wrong hallo'),
+                      child: Text('Something went wrong'),
 
                     );
-                    //   ],
                   });
                 }),
               ),
